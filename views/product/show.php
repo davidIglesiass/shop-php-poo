@@ -6,8 +6,8 @@
     <?php endif; ?>
     <div class="details">
         <h2><?= $product->name ?></h2>
-        <p>$<?= $product->price ?> EUR</p>
+        <p>$<?= $product->price ?> USD</p>
         <p><?= $product->description ?></p>
-        <a href="" class="buy">Buy</a>
+        <a href="/carshop/add&id=<?= $product->id ?>" class="buy">Buy</a>
     </div>
 </div>

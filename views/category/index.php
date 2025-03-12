@@ -1,19 +1,21 @@
-<div id="category-container">
+<div id="manage-container" class="m-categories">
     <h1>Manage Categories</h1>
     <form action="/category/save" method="POST">
         <input type="text" name="name" placeholder="Category name" required>
         <input type="submit" value="Create">
     </form>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-        </tr>
-        <?php foreach ($categories as $category) : ?>
+    <div id="table-container">
+        <table>
             <tr>
-                <td><?= $category->id ?></td>
-                <td><?= $category->name ?></td>
+                <th>ID</th>
+                <th>NAME</th>
             </tr>
-        <?php endforeach; ?>
-    </table>
+            <?php foreach ($categories as $category) : ?>
+                <tr>
+                    <td><?= $category->id ?></td>
+                    <td><?= $category->name ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
 </div>
